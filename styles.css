@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+}
+
+/* SupplyBridge Navigation Bar */
+header {
+    background-color: #343434;
+    height: 60px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline wavy #0056b3;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+}
+
+.nav-item {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item > a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 16px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item > a:hover {
+    background-color: #2a2a2a;
+    text-decoration: underline wavy #0056b3;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #1a1a1a;
+    min-width: 140px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.dropdown-menu li a {
+    color: #ffffff;
+    padding: 12px 18px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #2d2d2d;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-login,
+.btn-signup {
+    color: #ffffff;
+    padding: 7px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-signup {
+    border: 1px solid #ffffff;
+}
+
+.btn-login:hover,
+.btn-signup:hover {
+    background-color: #0056b3;
+}
+
+/* Main Card Container */
+.main-container {
+    max-width: 900px;
+    width: 90%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.banner-title {
+    background-color: #0056b3;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.content-body {
+    padding: 24px;
+}
+
+/* Input & Add Button Section */
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.input-section input[type="text"],
+.input-section select {
+    padding: 9px 12px;
+    font-size: 14px;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+}
+
+.input-section input[type="text"] {
+    flex: 1;
+}
+
+.btn-add {
+    background-color: #0066ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background-color: #0052cc;
+}
+
+/* 3-Column Task Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.column {
+    background-color: #f8f9fa;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 14px;
+    min-height: 260px;
+}
+
+.column h3 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    color: #0056b3;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0056b3;
+}
+
+/* Individual Task Cards */
+.task-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-left: 4px solid #0056b3;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.task-card.in-progress {
+    border-left-color: #e67e22;
+}
+
+.task-card.completed {
+    border-left-color: #28a745;
+}
+
+.task-title {
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #333333;
+}
+
+.card-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-small {
+    padding: 4px 9px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #0056b3;
+}
+
+.btn-move {
+    background-color: #28a745;
+}
+
+.btn-delete {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #888888;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .board {
+        grid-template-columns: 1fr;
+    }
+    .input-section {
+        flex-direction: column;
+    }
+}
